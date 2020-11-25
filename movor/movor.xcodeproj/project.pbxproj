@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D903597256F0E1D007BBA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D903596256F0E1D007BBA3F /* AppDelegate.swift */; };
 		4D903599256F0E1D007BBA3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D903598256F0E1D007BBA3F /* SceneDelegate.swift */; };
-		4D90359B256F0E1D007BBA3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90359A256F0E1D007BBA3F /* ViewController.swift */; };
+		4D90359B256F0E1D007BBA3F /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90359A256F0E1D007BBA3F /* GalleryViewController.swift */; };
 		4D90359E256F0E1D007BBA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D90359C256F0E1D007BBA3F /* Main.storyboard */; };
 		4D9035A0256F0E1D007BBA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D90359F256F0E1D007BBA3F /* Assets.xcassets */; };
 		4D9035A3256F0E1D007BBA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9035A1256F0E1D007BBA3F /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		4D903593256F0E1D007BBA3F /* movor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D903596256F0E1D007BBA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D903598256F0E1D007BBA3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D90359A256F0E1D007BBA3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D90359A256F0E1D007BBA3F /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		4D90359D256F0E1D007BBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D90359F256F0E1D007BBA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9035A2256F0E1D007BBA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,11 +101,10 @@
 			children = (
 				4D903596256F0E1D007BBA3F /* AppDelegate.swift */,
 				4D903598256F0E1D007BBA3F /* SceneDelegate.swift */,
-				4D90359A256F0E1D007BBA3F /* ViewController.swift */,
-				4D90359C256F0E1D007BBA3F /* Main.storyboard */,
-				4D90359F256F0E1D007BBA3F /* Assets.xcassets */,
-				4D9035A1256F0E1D007BBA3F /* LaunchScreen.storyboard */,
+				4D9035CF256F0E8C007BBA3F /* UI */,
+				4D9035CD256F0E72007BBA3F /* Resources */,
 				4D9035A4256F0E1D007BBA3F /* Info.plist */,
+				4D9035C9256F0E50007BBA3F /* Core */,
 			);
 			path = movor;
 			sourceTree = "<group>";
@@ -126,6 +125,71 @@
 				4D9035BA256F0E1E007BBA3F /* Info.plist */,
 			);
 			path = movorUITests;
+			sourceTree = "<group>";
+		};
+		4D9035C9256F0E50007BBA3F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4D9035CC256F0E6D007BBA3F /* Models */,
+				4D9035CB256F0E66007BBA3F /* Managers */,
+				4D9035CA256F0E61007BBA3F /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4D9035CA256F0E61007BBA3F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4D9035CB256F0E66007BBA3F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4D9035CC256F0E6D007BBA3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D9035CD256F0E72007BBA3F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D9035CE256F0E82007BBA3F /* Storyboards */,
+				4D90359F256F0E1D007BBA3F /* Assets.xcassets */,
+				4D9035A1256F0E1D007BBA3F /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4D9035CE256F0E82007BBA3F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D90359C256F0E1D007BBA3F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4D9035CF256F0E8C007BBA3F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4D9035D0256F0E92007BBA3F /* MainScreen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4D9035D0256F0E92007BBA3F /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4D90359A256F0E1D007BBA3F /* GalleryViewController.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D90359B256F0E1D007BBA3F /* ViewController.swift in Sources */,
+				4D90359B256F0E1D007BBA3F /* GalleryViewController.swift in Sources */,
 				4D903597256F0E1D007BBA3F /* AppDelegate.swift in Sources */,
 				4D903599256F0E1D007BBA3F /* SceneDelegate.swift in Sources */,
 			);
@@ -437,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 89PZVS8NFK;
+				DEVELOPMENT_TEAM = BRR8Y7HVJ9;
 				INFOPLIST_FILE = movor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
