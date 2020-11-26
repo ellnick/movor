@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20E5F68E96E71990D86A95DC /* Pods_movor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1226B9C3E496E6D6048975 /* Pods_movor.framework */; };
+		25ECC465565991587DE1086D /* Pods_movorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455F3E674B22152A0D4FE06A /* Pods_movorTests.framework */; };
 		4D903597256F0E1D007BBA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D903596256F0E1D007BBA3F /* AppDelegate.swift */; };
 		4D903599256F0E1D007BBA3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D903598256F0E1D007BBA3F /* SceneDelegate.swift */; };
 		4D90359B256F0E1D007BBA3F /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90359A256F0E1D007BBA3F /* GalleryViewController.swift */; };
@@ -15,6 +17,8 @@
 		4D9035A3256F0E1D007BBA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9035A1256F0E1D007BBA3F /* LaunchScreen.storyboard */; };
 		4D9035AE256F0E1D007BBA3F /* movorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9035AD256F0E1D007BBA3F /* movorTests.swift */; };
 		4D9035B9256F0E1E007BBA3F /* movorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9035B8256F0E1E007BBA3F /* movorUITests.swift */; };
+		4D9035F125703252007BBA3F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9035F025703252007BBA3F /* SessionManager.swift */; };
+		697467374983691CB9C61298 /* Pods_movor_movorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216CC9CF6F6651CBCEFCD001 /* Pods_movor_movorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		216CC9CF6F6651CBCEFCD001 /* Pods_movor_movorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movor_movorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455F3E674B22152A0D4FE06A /* Pods_movorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D903593256F0E1D007BBA3F /* movor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D903596256F0E1D007BBA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D903598256F0E1D007BBA3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 		4D9035B4256F0E1E007BBA3F /* movorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9035B8256F0E1E007BBA3F /* movorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movorUITests.swift; sourceTree = "<group>"; };
 		4D9035BA256F0E1E007BBA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9035F025703252007BBA3F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		8124CBBCDCD19F7DB141A105 /* Pods-movor-movorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movor-movorUITests.debug.xcconfig"; path = "Target Support Files/Pods-movor-movorUITests/Pods-movor-movorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81A57FD134523709173AFC35 /* Pods-movor-movorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movor-movorUITests.release.xcconfig"; path = "Target Support Files/Pods-movor-movorUITests/Pods-movor-movorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		919269FF81BA056AD0DCB8F5 /* Pods-movorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movorTests.release.xcconfig"; path = "Target Support Files/Pods-movorTests/Pods-movorTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB1226B9C3E496E6D6048975 /* Pods_movor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF63AB8E5117873125572272 /* Pods-movorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movorTests.debug.xcconfig"; path = "Target Support Files/Pods-movorTests/Pods-movorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9327E9E4C598484BD6BCC7F /* Pods-movor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movor.debug.xcconfig"; path = "Target Support Files/Pods-movor/Pods-movor.debug.xcconfig"; sourceTree = "<group>"; };
+		F387208362E338E9D8577BCA /* Pods-movor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movor.release.xcconfig"; path = "Target Support Files/Pods-movor/Pods-movor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E5F68E96E71990D86A95DC /* Pods_movor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25ECC465565991587DE1086D /* Pods_movorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				697467374983691CB9C61298 /* Pods_movor_movorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E5DE244E462E4066489822 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB1226B9C3E496E6D6048975 /* Pods_movor.framework */,
+				216CC9CF6F6651CBCEFCD001 /* Pods_movor_movorUITests.framework */,
+				455F3E674B22152A0D4FE06A /* Pods_movorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D90358A256F0E1D007BBA3F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,8 @@
 				4D9035AC256F0E1D007BBA3F /* movorTests */,
 				4D9035B7256F0E1E007BBA3F /* movorUITests */,
 				4D903594256F0E1D007BBA3F /* Products */,
+				9E3BBD5D2869E0F14E25E3D9 /* Pods */,
+				08E5DE244E462E4066489822 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,21 +161,14 @@
 			children = (
 				4D9035CC256F0E6D007BBA3F /* Models */,
 				4D9035CB256F0E66007BBA3F /* Managers */,
-				4D9035CA256F0E61007BBA3F /* Services */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		4D9035CA256F0E61007BBA3F /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		4D9035CB256F0E66007BBA3F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4D9035F025703252007BBA3F /* SessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -192,6 +214,19 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		9E3BBD5D2869E0F14E25E3D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9327E9E4C598484BD6BCC7F /* Pods-movor.debug.xcconfig */,
+				F387208362E338E9D8577BCA /* Pods-movor.release.xcconfig */,
+				8124CBBCDCD19F7DB141A105 /* Pods-movor-movorUITests.debug.xcconfig */,
+				81A57FD134523709173AFC35 /* Pods-movor-movorUITests.release.xcconfig */,
+				CF63AB8E5117873125572272 /* Pods-movorTests.debug.xcconfig */,
+				919269FF81BA056AD0DCB8F5 /* Pods-movorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9035BD256F0E1E007BBA3F /* Build configuration list for PBXNativeTarget "movor" */;
 			buildPhases = (
+				220974CF9C8EDE2B1D36FCC9 /* [CP] Check Pods Manifest.lock */,
 				4D90358F256F0E1D007BBA3F /* Sources */,
 				4D903590256F0E1D007BBA3F /* Frameworks */,
 				4D903591256F0E1D007BBA3F /* Resources */,
+				7CE90AF73625318EB329AAE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9035C0256F0E1E007BBA3F /* Build configuration list for PBXNativeTarget "movorTests" */;
 			buildPhases = (
+				34166D1509B033BE572B59DF /* [CP] Check Pods Manifest.lock */,
 				4D9035A5256F0E1D007BBA3F /* Sources */,
 				4D9035A6256F0E1D007BBA3F /* Frameworks */,
 				4D9035A7256F0E1D007BBA3F /* Resources */,
@@ -234,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9035C3256F0E1E007BBA3F /* Build configuration list for PBXNativeTarget "movorUITests" */;
 			buildPhases = (
+				9C42835ABBDD596AF951F59D /* [CP] Check Pods Manifest.lock */,
 				4D9035B0256F0E1E007BBA3F /* Sources */,
 				4D9035B1256F0E1E007BBA3F /* Frameworks */,
 				4D9035B2256F0E1E007BBA3F /* Resources */,
+				3533526BED1B7EF1DBD55328 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +357,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		220974CF9C8EDE2B1D36FCC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34166D1509B033BE572B59DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3533526BED1B7EF1DBD55328 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movor-movorUITests/Pods-movor-movorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movor-movorUITests/Pods-movor-movorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movor-movorUITests/Pods-movor-movorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CE90AF73625318EB329AAE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movor/Pods-movor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movor/Pods-movor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movor/Pods-movor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C42835ABBDD596AF951F59D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movor-movorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D90358F256F0E1D007BBA3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -324,6 +467,7 @@
 			files = (
 				4D90359B256F0E1D007BBA3F /* GalleryViewController.swift in Sources */,
 				4D903597256F0E1D007BBA3F /* AppDelegate.swift in Sources */,
+				4D9035F125703252007BBA3F /* SessionManager.swift in Sources */,
 				4D903599256F0E1D007BBA3F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +641,7 @@
 		};
 		4D9035BE256F0E1E007BBA3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9327E9E4C598484BD6BCC7F /* Pods-movor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +661,7 @@
 		};
 		4D9035BF256F0E1E007BBA3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F387208362E338E9D8577BCA /* Pods-movor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -535,6 +681,7 @@
 		};
 		4D9035C1256F0E1E007BBA3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF63AB8E5117873125572272 /* Pods-movorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +704,7 @@
 		};
 		4D9035C2256F0E1E007BBA3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919269FF81BA056AD0DCB8F5 /* Pods-movorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +727,7 @@
 		};
 		4D9035C4256F0E1E007BBA3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8124CBBCDCD19F7DB141A105 /* Pods-movor-movorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -599,6 +748,7 @@
 		};
 		4D9035C5256F0E1E007BBA3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81A57FD134523709173AFC35 /* Pods-movor-movorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

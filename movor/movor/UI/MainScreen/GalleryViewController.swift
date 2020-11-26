@@ -12,6 +12,9 @@ class GalleryViewController: UIViewController, UINavigationControllerDelegate {
     //MARK: - Outlets
     
     @IBOutlet private weak var galleryButton: UIButton!
+    @IBOutlet private weak var uploadButton: UIButton!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var progressBar: UIProgressView!
     
     //MARK: - Private
     
@@ -23,7 +26,6 @@ class GalleryViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         configureUI()
         
-        
         // Do any additional setup after loading the view.
     }
     
@@ -33,6 +35,9 @@ class GalleryViewController: UIViewController, UINavigationControllerDelegate {
         self.present(imagePickerController, animated: true, completion: nil)
     }
     
+    @IBAction private func uploadDidTap(_ sender: Any) {
+        
+    }
     
     //MARK: - Private
     

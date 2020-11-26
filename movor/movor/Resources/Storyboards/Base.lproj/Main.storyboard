@@ -32,26 +32,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-Yj-uWY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-Yj-uWY">
                                 <rect key="frame" x="183" y="433" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Gallery"/>
                                 <connections>
                                     <action selector="galleryDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lPJ-hh-orD"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yHW-El-cH1">
+                                <rect key="frame" x="20" y="586" width="374" height="4"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seX-Yq-Zsp">
+                                <rect key="frame" x="182.5" y="471" width="49" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qhg-N5-VdS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCZ-8w-AW1">
+                                <rect key="frame" x="20" y="654" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1hT-Yj-uWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xF-tC-0yr"/>
+                            <constraint firstItem="XCZ-8w-AW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AA0-Ly-DMQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHW-El-cH1" secondAttribute="trailing" constant="20" id="IyP-38-a9p"/>
+                            <constraint firstItem="yHW-El-cH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LlZ-cb-WlP"/>
+                            <constraint firstItem="seX-Yq-Zsp" firstAttribute="top" secondItem="1hT-Yj-uWY" secondAttribute="bottom" constant="8" symbolic="YES" id="cQg-OE-1SV"/>
+                            <constraint firstItem="1hT-Yj-uWY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mh5-M2-LkK"/>
+                            <constraint firstItem="XCZ-8w-AW1" firstAttribute="top" secondItem="yHW-El-cH1" secondAttribute="bottom" constant="64" id="n3f-uk-y3j"/>
+                            <constraint firstItem="seX-Yq-Zsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ryp-NF-GXp"/>
+                            <constraint firstItem="yHW-El-cH1" firstAttribute="top" secondItem="seX-Yq-Zsp" secondAttribute="bottom" constant="85" id="vtJ-Ik-8nF"/>
+                            <constraint firstItem="yHW-El-cH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x0o-Kp-qCQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XCZ-8w-AW1" secondAttribute="trailing" constant="20" id="xSV-jX-am3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rYd-h7-VzM"/>
                     <connections>
                         <outlet property="galleryButton" destination="1hT-Yj-uWY" id="JQX-gh-hXD"/>
+                        <outlet property="progressBar" destination="yHW-El-cH1" id="wbF-gI-MkW"/>
+                        <outlet property="statusLabel" destination="XCZ-8w-AW1" id="EKv-1G-8LX"/>
+                        <outlet property="uploadButton" destination="seX-Yq-Zsp" id="m1V-xk-hHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="106"/>
+            <point key="canvasLocation" x="40.579710144927539" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>

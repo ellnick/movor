@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'movor' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod "TUSKit"
+
+  # Pods for movor
+
+  target 'movorTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'movorUITests' do
+    # Pods for testing
+  end
+
+end
