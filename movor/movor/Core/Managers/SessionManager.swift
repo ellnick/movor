@@ -10,11 +10,14 @@ import Foundation
 
 enum SessionManagerError: Error {
     case uploadStoreNotProvided
+    case uploadNotCreated
     
     var localizedDescription: String {
         switch self {
             case .uploadStoreNotProvided:
                 return "Upload Store not provided"
+            case .uploadNotCreated:
+                return "Upload Not created"
         }
     }
 }
@@ -31,6 +34,9 @@ protocol SessionManagerProtocol: class {
     func stopSession()
     
     func upload(fromFile: URL)
+    
+    func cancelAll()
+    func stop(_ completionHandler: (() -> Void)?)
     
     func resumeAll()
     
@@ -58,6 +64,8 @@ class SessionManager: SessionManagerProtocol {
     
     private var uploadStore: TUSUploadStore?
     
+    private var currentUpload: TUSResumableUpload?
+    
     // MARK: - Init
     
     init() {}
@@ -81,13 +89,39 @@ class SessionManager: SessionManagerProtocol {
     }
     
     func upload(fromFile: URL) {
-        let upload = tusSession?.createUpload(fromFile: fromFile, retry: -1, headers: nil, metadata: nil)
+        guard let currentUpload = tusSession?.createUpload(fromFile: fromFile, retry: 1, headers: [:], metadata: [:]) else {
+            print("upload was not created")
+            return
+        }
         
-        upload?.progressBlock = progress
-        upload?.resultBlock = result
-        upload?.failureBlock = failure
+        currentUpload.progressBlock = progress
+        currentUpload.resultBlock = result
+        currentUpload.failureBlock = failure
         
-        upload?.resume()
+        let res = currentUpload.resume()
+        print("upload res: \(res)")
+    }
+    
+    func stop(_ completionHandler: (() -> Void)?) {
+        let res = tusSession?.stopAll()
+        
+        if res == 1 {
+            completionHandler?()
+        }
+    }
+    
+    func cancelAll() {
+        currentUpload = nil
+        tusSession?.cancelAll()
+    }
+    
+    func resume() {
+        guard let uploadId = currentUpload?.uploadId else {
+            return
+        }
+        let res = tusSession?.restoreUpload(uploadId)
+        
+        print("upload res: \(res)")
     }
     
     func resumeAll() {

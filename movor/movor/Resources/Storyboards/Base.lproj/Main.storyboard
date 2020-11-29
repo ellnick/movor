@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bHC-fE-zIY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -55,15 +56,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oz-LC-Wif">
+                                <rect key="frame" x="191" y="509" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tW9-YV-dWC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1hT-Yj-uWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xF-tC-0yr"/>
                             <constraint firstItem="XCZ-8w-AW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AA0-Ly-DMQ"/>
+                            <constraint firstItem="8oz-LC-Wif" firstAttribute="top" secondItem="seX-Yq-Zsp" secondAttribute="bottom" constant="8" symbolic="YES" id="DlI-1K-cI0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHW-El-cH1" secondAttribute="trailing" constant="20" id="IyP-38-a9p"/>
                             <constraint firstItem="yHW-El-cH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LlZ-cb-WlP"/>
                             <constraint firstItem="seX-Yq-Zsp" firstAttribute="top" secondItem="1hT-Yj-uWY" secondAttribute="bottom" constant="8" symbolic="YES" id="cQg-OE-1SV"/>
+                            <constraint firstItem="8oz-LC-Wif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ef6-rx-btA"/>
+                            <constraint firstItem="seX-Yq-Zsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lpu-Ui-uCL"/>
                             <constraint firstItem="1hT-Yj-uWY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mh5-M2-LkK"/>
                             <constraint firstItem="XCZ-8w-AW1" firstAttribute="top" secondItem="yHW-El-cH1" secondAttribute="bottom" constant="64" id="n3f-uk-y3j"/>
                             <constraint firstItem="seX-Yq-Zsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ryp-NF-GXp"/>
@@ -77,6 +88,7 @@
                         <outlet property="galleryButton" destination="1hT-Yj-uWY" id="JQX-gh-hXD"/>
                         <outlet property="progressBar" destination="yHW-El-cH1" id="wbF-gI-MkW"/>
                         <outlet property="statusLabel" destination="XCZ-8w-AW1" id="EKv-1G-8LX"/>
+                        <outlet property="stopButton" destination="8oz-LC-Wif" id="aqc-N0-i7C"/>
                         <outlet property="uploadButton" destination="seX-Yq-Zsp" id="m1V-xk-hHV"/>
                     </connections>
                 </viewController>

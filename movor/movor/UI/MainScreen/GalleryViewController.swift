@@ -15,6 +15,7 @@ class GalleryViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet private weak var galleryButton: UIButton!
     @IBOutlet private weak var uploadButton: UIButton!
+    @IBOutlet private weak var stopButton: UIButton!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var progressBar: UIProgressView!
     
@@ -46,6 +47,11 @@ class GalleryViewController: UIViewController, UINavigationControllerDelegate {
         sessionManager?.upload(fromFile: url)
     }
     
+    @IBAction func stopDidTap(_ sender: Any) {
+        sessionManager?.stop({
+            self.statusLabel.text = "Stopped"
+        })
+    }
     //MARK: - Private
     
     private func configureUI() {
@@ -54,8 +60,10 @@ class GalleryViewController: UIViewController, UINavigationControllerDelegate {
         imagePickerController.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
         imagePickerController.allowsEditing = true
         
+        progressBar.progress = 0.0
+        
         sessionManager = SessionManager()
-        guard let url = URL(string: " http://192.168.138.29:8099/media-service/upload") else {
+        guard let url = URL(string: "http://192.168.138.29:8099/media-service/upload") else {
             return
         }
         sessionManager?.startSession(endpoint: url, { (error) in
@@ -81,7 +89,18 @@ extension GalleryViewController : UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.dismiss(animated: true, completion: nil)
-        assetURL = info[UIImagePickerController.InfoKey.referenceURL] as! URL
+        
+        if let imgUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            let imgName = imgUrl.lastPathComponent
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+            let localPath = documentDirectory?.appending("/\(imgName)")
+
+            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            let data = image.pngData()! as NSData
+            data.write(toFile: localPath!, atomically: true)
+            assetURL = URL.init(fileURLWithPath: localPath!)
+            print("url: \(String(describing: assetURL?.absoluteString))")
+        }
     }
 }
 
