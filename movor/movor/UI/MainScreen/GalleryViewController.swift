@@ -91,13 +91,9 @@ extension GalleryViewController : UIImagePickerControllerDelegate {
         self.dismiss(animated: true, completion: nil)
         
         if let imgUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL {
-            let imgName = imgUrl.lastPathComponent
+            let imgName = imgUrl.deletingPathExtension().lastPathComponent
             let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
             let localPath = documentDirectory?.appending("/\(imgName)")
-
-            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-            let data = image.pngData()! as NSData
-            data.write(toFile: localPath!, atomically: true)
             assetURL = URL.init(fileURLWithPath: localPath!)
             print("url: \(String(describing: assetURL?.absoluteString))")
         }
